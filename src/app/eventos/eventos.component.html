@@ -1,0 +1,26 @@
+
+<div class="cuadrado" (mouseenter)="onMouseEnter()" (mouseout)="onMouseOut()" (clickOutside)="onClickedOutside($event)">
+{{mensaje}}
+</div>
+
+<input type="text" (change)="onChangeInput($event)" (input)="onInput($event)" (blur)="onBlur()" (focus)="onFocus()">
+
+<div class="container">
+    <h2 class="container__suma">{{number1}} + {{number2}}</h2>
+    <button (click)="onClick()">¡¡Click!!</button>
+    <h2 class="container__total">{{total}}</h2>
+</div>
+
+<div class="container">
+    <h2 class="container__suma">{{number3}}</h2>
+    <button (click)="onStart()">¡¡Start!!</button>
+</div>
+
+<div>
+    <button (click)="evento($event)">¡¡Pulsa!!</button>
+    <select (change)="onChange($event)">
+        <option value="uno">Uno</option>
+        <option value="dos">Dos</option>
+        <option value="tres">Tres</option>
+    </select>
+</div>

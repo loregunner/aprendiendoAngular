@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    margin-left: 50rem;
+    margin-top: 5rem;
+    border: 1px solid black;
+    flex-direction: column;
+}
+
+.container button{
+    width: 150px;
+    height: 20px;
+    margin-left: 5rem;
+}
+
+.container__suma{
+    margin-top: 6rem;
+    margin-left: 8rem;;
+}
+
+.container__total{
+    margin-left: 9.5rem;
+}
+
+.cuadrado{
+    width: 300px;
+    height: 300px;
+    background-color: blanchedalmond;
+}
