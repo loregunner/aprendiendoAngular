@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-eventos',
@@ -7,29 +8,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventosComponent implements OnInit {
 
-number1: number;
-number2: number;
-total: number;
-number3: number;
+@Input() number1: number;
+@Input() number2: number;
+@Input() total: number;
+@Input() inicio: number;
+@Output() terminaCronometro: EventEmitter<string>;
+contador: number
 mensaje: string;
  
 
 constructor() {
-    this.number1 = 78;
-    this.number2 = 3;
+    this.number1 = 0;
+    this.number2 = 0;
     this.total = 0;
-    this.number3= 9;
+    this.contador= 10;
+    this.inicio = 10;
+    this.terminaCronometro = new EventEmitter()
     this.mensaje= "este es el mensaje con el mouseenter"
   }
 
   ngOnInit(): void {
+    this.contador = this.inicio ? this.inicio: 10;
   }
 
 onStart() {
   let interval = setInterval(() => 
-  {this.number3--
- if(this.number3 === 0){
+  {this.contador--
+ if(this.contador=== 0){
    clearInterval(interval)
+   this.contador = this.inicio
+   this.terminaCronometro.emit('Finaliza el cronometro' + this.inicio)
  }
  }
 , 1000)

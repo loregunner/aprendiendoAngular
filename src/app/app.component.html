@@ -1,1 +1,19 @@
-<app-eventos></app-eventos>
+ <!-- ngStyle -->
+<!-- <p [ngStyle]="propiedadesParrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore assumenda aspernatur
+    excepturi sequi. Voluptatem quo soluta delectus ducimus repudiandae quasi totam, excepturi ipsum. Et obcaecati
+    expedita iste nemo maiores fugiat.</p>
+<div>
+    <button (click)="cambiaColor('v')">Verde</button>
+    <button (click)="cambiaColor('r')">Rojo</button>
+    <button (click)="cambiaColor('a')">Amarillo</button>
+</div> 
+<div>
+    <input type="text" [(ngModel)]="propiedadesParrafo.color">
+</div>
+<div>
+    <input type="range" min="12" max="200" step="2" (input)="onRange($event)">
+</div> -->
+
+<!-- ngIf -->
+<p *ngIf="mostrar">Contenido del parrafo</p>
+<button (click)="onMostrar()">Mostrar / Ocultar</button>

@@ -1,0 +1,8 @@
+<div class="form">
+    <h3>Escribe tu lista de tareas</h3>
+    <label for="titulo">Título</label>
+    <input type="text" name="titulo" [(ngModel)]="listTaks.titulo">
+    <label for="description">Descripción</label>
+    <input type="text" name="description" [(ngModel)]="listTaks.descripcion">
+    <button (click)="formSave()">Enviar</button>
+</div>
